@@ -7,14 +7,5 @@
         </button>
     </li>
 </ul>
-
-<div *ngIf="selectedHero">
-    <!--uppercase pipe-->
-    <h2>{{selectedHero.name | uppercase}} Details</h2>
-    <!--two way binding syntax, data flows from textbox to hero.name and back-->
-    <div>id: {{selectedHero.id}}</div>
-    <div>
-        <label for="hero-name">Hero name: </label>
-        <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-    </div>
-</div>
+<!--one way data binding of selectedHero to hero in child component-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
