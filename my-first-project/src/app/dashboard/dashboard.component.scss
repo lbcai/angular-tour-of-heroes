@@ -20,7 +20,7 @@ h2 {
 
   a {
     background-color: #3f525c;
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 1rem;
     font-size: 1.2rem;
     text-decoration: none;
@@ -31,6 +31,9 @@ h2 {
     min-width: 70px;
     margin: .5rem auto;
     box-sizing: border-box;
+    height: 100px;
+    line-height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
 
     /* flexbox */
     order: 0;
@@ -48,3 +51,8 @@ h2 {
   a:hover {
     background-color: #000;
   }
+
+    /* everywhere else */
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
