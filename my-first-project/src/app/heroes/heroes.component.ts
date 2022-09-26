@@ -10,8 +10,6 @@ import { MessageService } from '../message.service';
 })
 export class HeroesComponent implements OnInit {
 
-  selectedHero?: Hero;
-
   heroes: Hero[] = [];
 
   getHeroes(): void {
@@ -21,11 +19,6 @@ export class HeroesComponent implements OnInit {
     // think of this like promises in js
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id} name=${hero.name}`);
-  };
 
   // injection site for the service for fetching data
   // constructor should not DO anything, instead put those things into ngOnInit

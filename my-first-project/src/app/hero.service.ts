@@ -19,4 +19,16 @@ export class HeroService {
     return heroes;
   }
 
+  getHero(id: number): Observable<Hero> {
+    // For now, assume that a hero with the specified `id` always exists.
+    // Error handling will be added in the next step of the tutorial.
+
+    // this is async, as is getHeroes. uses of() to return mock hero as Observable
+    // so you can rewrite this later as an http request without changing the stuff that calls this function
+    const hero = HEROES.find(h => h.id === id)!;
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(hero);
+  }
+
+
 }
